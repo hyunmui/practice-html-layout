@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 05</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      background-color: #B2D8F9;
+    }
+
+    .section-01 {
+      background-color: #83C4FA;
+    }
+
+    .section-02 {
+      background-color: #56ADF4;
+    }
+
+    .section-03 {
+      background-color: #379CF4;
+    }
+
+    .section-04 {
+      background-color: #158EF2;
+    }
+
+    .section-05 {
+      background-color: #1480E0;
+    }
+
+    .section-06 {
+      background-color: #156ECA;
+    }
+
+    .section-07 {
+      background-color: #105DB5;
+    }
+
+    .section-08 {
+      background-color: #0192E1;
+    }
+
+    footer {
+      background-color: #4993CF;
+    }
+
+    header,
+    footer {
+      height: 200px;
+      clear: both;
+    }
+
+    div.section-01 {
+      height: 200px;
+    }
+
+    div.section-02 {
+      height: 300px;
+      float: left;
+      width: 30%
+    }
+
+    div.section-03,
+    div.section-04 {
+      height: 150px;
+      float: right;
+      width: 70%;
+    }
+
+    div.section-05,
+    div.section-06,
+    div.section-07 {
+      float: left;
+      width: 33.3333%;
+      height: 200px;
+    }
+
+    div.section-08 {
+      clear: both;
+    }
+
+    div.img-box {
+      width: 20vw;
+      height: 20vw;
+      background-color: #1466BD;
+      border-radius: 1em;
+      margin: 2em 1em;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 1020px) {
+
+      div.section-05,
+      div.section-06 {
+        float: left;
+        width: 50%;
+        height: 200px;
+      }
+
+      div.section-07 {
+        display: none;
+      }
+
+      div.img-box:last-child {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .section-01 {
+        width: 100%;
+      }
+
+      .section-02 {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .section-group {
+        width: 100% !important;
+      }
+
+      div.img-boxes {
+        width: 100%;
+        padding: 20px;
+      }
+
+      div.img-box {
+        width: 100%;
+        margin: 1em 0em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex-center">header</header>
+  <main>
+    <div class="flex-center section section-01">section 01</div>
+    <div class="flex-center section section-02">section 02</div>
+    <div class="flex-center section section-03">section 03</div>
+    <div class="flex-center section section-04">section 04</div>
+    <div class="flex-center section section-05">section 05</div>
+    <div class="flex-center section section-06">section 06</div>
+    <div class="flex-center section section-07">section 07</div>
+    <div class="flex-center section section-08 img-wrap">
+      <div class="img-boxes">
+        <div class="img-box">image-01</div>
+        <div class="img-box">image-02</div>
+        <div class="img-box">image-03</div>
+        <div class="img-box">image-04</div>
+      </div>
+    </div>
+  </main>
+  <footer class="flex-center">footer</footer>
+</body>
+
+</html>

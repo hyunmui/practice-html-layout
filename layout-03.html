@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 03</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      background-color: #74CFFA;
+    }
+
+    .section-01 {
+      background-color: #3FBCF6;
+    }
+
+    .section-02 {
+      background-color: #18AFF3;
+    }
+
+    .section-03 {
+      background-color: #00A1F3;
+    }
+
+    .section-04 {
+      background-color: #0192E1;
+    }
+
+    footer {
+      background-color: #0179C2;
+    }
+
+    header,
+    footer {
+      height: 150px;
+      clear: both;
+    }
+
+    .section-01 {
+      height: 420px;
+      width: 30%;
+      float: left;
+    }
+
+    .section-group {
+      height: 140px;
+      width: 70%;
+      float: right;
+    }
+
+    @media screen and (max-width: 1020px) {
+      .section-group.section-02 {
+        height: 210px;
+      }
+
+      .section-group.section-03 {
+        height: 210px;
+      }
+
+      .section-group.section-04 {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .section-01 {
+        width: 100%;
+      }
+
+      .section-group.section-02 {
+        width: 50%;
+      }
+
+      .section-group.section-03 {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .section-group {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex-center">header</header>
+  <main>
+    <div class="flex-center section-01">section 01</div>
+    <div class="flex-center section-group section-02">section 02</div>
+    <div class="flex-center section-group section-03">section 03</div>
+    <div class="flex-center section-group section-04">section 04</div>
+  </main>
+  <footer class="flex-center">footer</footer>
+</body>
+
+</html>

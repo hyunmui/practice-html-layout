@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 02</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      background-color: #74BC79;
+    }
+
+    .section-01 {
+      background-color: #57AE5F;
+    }
+
+    .section-02 {
+      background-color: #3EA247;
+    }
+
+    .section-03 {
+      background-color: #36923D;
+    }
+
+    footer {
+      background-color: #297531;
+    }
+
+    header,
+    footer {
+      height: 150px;
+      clear: both;
+    }
+
+    main > div {
+      float: left;
+      height: 420px;
+    }
+
+    .section-01 {
+      width: 30%;
+    }
+
+    .section-02 {
+      width: 50%;
+    }
+
+    .section-03 {
+      width: 20%;
+    }
+
+    @media screen and (max-width: 1020px) {
+      .section-02 {
+        width: 70%;
+      }
+
+      .section-03 {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .section-01 {
+        width: 100%;
+      }
+
+      .section-02 {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .section-group {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex-center">header</header>
+  <main>
+    <div class="flex-center section-01">section 01</div>
+    <div class="flex-center section-02">section 02</div>
+    <div class="flex-center section-03">section 03</div>
+  </main>
+  <footer class="flex-center">footer</footer>
+</body>
+
+</html>
